@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31410.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSONSerializer", "JSONSerializer\JSONSerializer.csproj", "{9A142200-B048-473E-9B22-A22E0A56BC91}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JSONSerializer", "JSONSerializer\JSONSerializer.csproj", "{9A142200-B048-473E-9B22-A22E0A56BC91}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BinarySerializer", "BinarySerializer\BinarySerializer.csproj", "{BD2AC153-680C-4D1B-85DB-AAD22CD33575}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolymorphieInterfaces", "PolymorphieInterfaces\PolymorphieInterfaces.csproj", "{5564469D-841A-463E-A83E-B26DDC8E07AA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{9A142200-B048-473E-9B22-A22E0A56BC91}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A142200-B048-473E-9B22-A22E0A56BC91}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A142200-B048-473E-9B22-A22E0A56BC91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD2AC153-680C-4D1B-85DB-AAD22CD33575}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD2AC153-680C-4D1B-85DB-AAD22CD33575}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD2AC153-680C-4D1B-85DB-AAD22CD33575}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD2AC153-680C-4D1B-85DB-AAD22CD33575}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5564469D-841A-463E-A83E-B26DDC8E07AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5564469D-841A-463E-A83E-B26DDC8E07AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5564469D-841A-463E-A83E-B26DDC8E07AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5564469D-841A-463E-A83E-B26DDC8E07AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
