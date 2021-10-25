@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace PolymorphieInterfaces
 {
-    public class Person : BaseModel, IManageableEntity
+    public class Person : BaseModel, IManageableEntity, ICloneable
     {
         private object _location;
 
         public object Parent { get; set; }
 
-        public object Child { get; set; }
+        public IEnumerable<object> Children { get; set; }
 
         public string Name { get; set; }
 
@@ -21,9 +21,9 @@ namespace PolymorphieInterfaces
 
         }
 
-        public virtual void AddChild()
+        public virtual void AddChild(object child)
         {
-
+            Children = Children.Append(child);
         }
 
         public virtual void SetParent()
@@ -41,6 +41,11 @@ namespace PolymorphieInterfaces
         public override string ToString()
         {
             return base.ToString();
+        }
+
+        public object Clone()
+        {
+            return this;
         }
     }
 }

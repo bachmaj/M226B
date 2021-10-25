@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace PolymorphieInterfaces
 {
@@ -6,7 +7,13 @@ namespace PolymorphieInterfaces
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            IManageableEntity manageablePerson = new Person();
+            Employee salesManager = new SalesManager();
+            ILocation location = new Location();
+
+            manageablePerson.AddChild(new object());
+            salesManager.Location = location;
+            location.Name = "Zurich";
         }
     }
 }

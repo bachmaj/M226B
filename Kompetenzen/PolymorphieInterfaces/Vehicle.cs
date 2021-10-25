@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace PolymorphieInterfaces
 {
-    public class Vehicle : BaseModel, IManageableEntity
+    public class Vehicle : BaseModel, IManageableEntity, ICloneable
     {
         public string Brand { get; set; }
 
-        public object Children { get; set; }
+        public IEnumerable<object> Children { get; set; }
 
         public Location Location { get; set; }
 
@@ -18,11 +18,16 @@ namespace PolymorphieInterfaces
 
         public object Parent { get; set; }
 
-        public string Text { get; set; }
+        public new string Text { get; set; }
 
         public Vehicle()
         {
 
+        }
+
+        public Vehicle(string name)
+        {
+            Name = name;
         }
 
         public void Drive()
@@ -50,6 +55,9 @@ namespace PolymorphieInterfaces
 
         }
 
-
+        public object Clone()
+        {
+            return this;
+        }
     }
 }

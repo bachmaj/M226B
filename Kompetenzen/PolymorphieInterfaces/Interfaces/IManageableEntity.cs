@@ -10,9 +10,9 @@ namespace PolymorphieInterfaces
     {
         public object Parent { get; set; }
 
-        public object Children { get; set; }
+        public IEnumerable<object> Children { get; set; }
 
-        void AddChild();
+        void AddChild(object child);
 
         void SetParent();
     }
