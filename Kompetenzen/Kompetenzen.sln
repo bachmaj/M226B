@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JSONSerializer", "JSONSeria
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BinarySerializer", "BinarySerializer\BinarySerializer.csproj", "{BD2AC153-680C-4D1B-85DB-AAD22CD33575}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolymorphieInterfaces", "PolymorphieInterfaces\PolymorphieInterfaces.csproj", "{5564469D-841A-463E-A83E-B26DDC8E07AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PolymorphieInterfaces", "PolymorphieInterfaces\PolymorphieInterfaces.csproj", "{5564469D-841A-463E-A83E-B26DDC8E07AA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SerializerJson", "SerializerJson\SerializerJson.csproj", "{94498409-5880-4480-9681-6B8198A50E9E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{5564469D-841A-463E-A83E-B26DDC8E07AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5564469D-841A-463E-A83E-B26DDC8E07AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5564469D-841A-463E-A83E-B26DDC8E07AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94498409-5880-4480-9681-6B8198A50E9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94498409-5880-4480-9681-6B8198A50E9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94498409-5880-4480-9681-6B8198A50E9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94498409-5880-4480-9681-6B8198A50E9E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
