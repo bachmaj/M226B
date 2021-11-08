@@ -12,7 +12,7 @@ namespace PolymorphieInterfaces
 
         public object Parent { get; set; }
 
-        public IEnumerable<object> Children { get; set; }
+        public IEnumerable<IManageableEntity> Children { get; set; }
 
         public string Name { get; set; }
 
@@ -21,7 +21,7 @@ namespace PolymorphieInterfaces
 
         }
 
-        public virtual void AddChild(object child)
+        public virtual void AddChild(IManageableEntity child)
         {
             Children = Children.Append(child);
         }

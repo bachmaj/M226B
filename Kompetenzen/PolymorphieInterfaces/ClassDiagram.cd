@@ -47,7 +47,7 @@
   <Class Name="PolymorphieInterfaces.Person">
     <Position X="2.75" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAEIAEAEAAQAQAAAAAAAAAAGAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAEAAEAEAEQAQAAAAAAAAAAGAAAAAAABA=</HashCode>
       <FileName>Person.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />

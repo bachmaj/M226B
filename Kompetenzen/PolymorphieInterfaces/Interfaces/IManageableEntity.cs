@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace PolymorphieInterfaces
 {
-    interface IManageableEntity
+    public interface IManageableEntity
     {
         public object Parent { get; set; }
 
-        public IEnumerable<object> Children { get; set; }
+        public IEnumerable<IManageableEntity> Children { get; set; }
 
-        void AddChild(object child);
+        void AddChild(IManageableEntity child);
 
         void SetParent();
     }

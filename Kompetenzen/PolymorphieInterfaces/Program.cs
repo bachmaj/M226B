@@ -11,7 +11,7 @@ namespace PolymorphieInterfaces
             Employee salesManager = new SalesManager();
             ILocation location = new Location();
 
-            manageablePerson.AddChild(new object());
+            manageablePerson.AddChild(salesManager);
             salesManager.Location = location;
             location.Name = "Zurich";
         }
