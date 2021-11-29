@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PolymorphieInterfaces", "Po
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SerializerJson", "SerializerJson\SerializerJson.csproj", "{94498409-5880-4480-9681-6B8198A50E9E}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Events", "..\..\..\..\Downloads\01-M226B-master\01-M226B-master\M226B\Events\Events.csproj", "{2141EECD-5368-47DB-AB0A-C3667AB95320}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{94498409-5880-4480-9681-6B8198A50E9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94498409-5880-4480-9681-6B8198A50E9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94498409-5880-4480-9681-6B8198A50E9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2141EECD-5368-47DB-AB0A-C3667AB95320}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2141EECD-5368-47DB-AB0A-C3667AB95320}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2141EECD-5368-47DB-AB0A-C3667AB95320}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2141EECD-5368-47DB-AB0A-C3667AB95320}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -10,137 +10,59 @@ namespace SerializerJson
 {
     class Program
     {
-        public static string FileNameDog { get; set; } = @"D:/Schule/M226B/Repo/SerializerJson/Daten/Dog/dog.json";
-        public static string FileNameLion { get; set; } = @"D:/Schule/M226B/Repo/SerializerJson/Daten/Lion/lion.json";
+        public static string FileNameCar { get; set; } = @"C:\Users\bachmaj9\source\repos\M226B\Kompetenzen\SerializerJson\Daten\Car\car.json";
+        public static string FileNameTruck { get; set; } = @"C:\Users\bachmaj9\source\repos\M226B\Kompetenzen\SerializerJson\Daten\Truck\truck.json";
+
         private static bool isRunning = true;
         private static string option;
 
         static void Main(string[] args)
         {
-            List<Animal> dogs = new List<Animal>();
-            List<Lion> lions = new List<Lion>();
+            List<Vehicle> cars = new List<Vehicle>();
+            List<Vehicle> trucks = new List<Vehicle>();
+
             while (isRunning)
             {
-
-
-                Console.WriteLine("Is animal Dog or lion ");
-
+                Console.WriteLine("Is vehicle car or truck");
                 option = Console.ReadLine();
-                if (option.ToLower() == "dog")
+
+                if (option.ToLower() == "car")
                 {
-                    Dog dog = new Dog();
+                    Car car = new Car();
 
-                    Console.WriteLine("Enter the Name of the dog");
+                    Console.WriteLine("Enter the Price of the car");
+                    car.Price = Convert.ToInt32(Console.ReadLine());
 
-                    dog.Name = Console.ReadLine();
+                    Console.WriteLine("Enter the Brand of the car");
+                    car.Brand = Console.ReadLine();
 
-                    dog.Greet();
-
-                    dogs.Add(dog);
-
-
-
-                    Save.SaveInClass(dog, dogs, FileNameDog);
-
-
-
-
-
+                    car.PrintInfo();
+                    cars.Add(car);
+                    Save.SaveInClass(cars, FileNameCar);
                 }
-                else if (option == "lion")
+                else if (option == "truck")
                 {
-                    Lion lion = new Lion();
+                    Truck truck = new Truck();
 
-                    Console.WriteLine("Enter the Toothlenght of the lion");
+                    Console.WriteLine("Enter the weight of the truck");
+                    truck.Weight = Convert.ToInt32(Console.ReadLine());
 
-                    lion.toothlength = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Enter the Brand of the truck");
+                    truck.Brand = Console.ReadLine();
 
-                    lion.Greet();
-
-                    lions.Add(lion);
-
-                    JsonSerializer serializer = new JsonSerializer();
-
-                    using (StreamWriter sw = new StreamWriter(FileNameLion))
-                    using (JsonWriter writer = new JsonTextWriter(sw))
-                    {
-                        serializer.Serialize(writer, lions);
-
-                    }
-
-
+                    truck.PrintInfo();
+                    trucks.Add(truck);
+                    Save.SaveInClass(trucks, FileNameTruck);
                 }
                 else
                 {
-                    Animal animal = new Animal();
-
-                    animal.Greet();
-
-
+                    Vehicle vehicle = new Vehicle()
+                    {
+                        Brand = "undefined"
+                    };
+                    vehicle.PrintInfo();
                 }
-
-
-
-                //    try
-
-                //    {
-                //        using (StreamReader file = File.OpenText(FileNameDog))
-                //        {
-                //            JsonSerializer serializer = new JsonSerializer();
-                //            List<Dog> DogsRead = (List<Dog>)serializer.Deserialize(file, typeof(List<Dog>));
-
-                //            Console.WriteLine("Name of Dogs");
-                //            foreach (Dog dog in DogsRead)
-                //            {
-                //                Console.WriteLine(dog.Name);
-                //            }
-                //        }
-
-
-
-                //    }
-                //    catch (Exception ex)
-                //    {
-                //        Console.WriteLine("No Dogs");
-                //    }
-
-
-                //    try
-
-                //    {
-                //        using (StreamReader file = File.OpenText(FileNameLion))
-                //        {
-                //            JsonSerializer serializer = new JsonSerializer();
-                //            List<Lion> lionsRead = (List<Lion>)serializer.Deserialize(file, typeof(List<Lion>));
-
-                //            Console.WriteLine("Toothlenght of Lions");
-                //            foreach (Lion lion in lionsRead)
-                //            {
-                //                Console.WriteLine(lion.toothlength);
-                //            }
-                //        }
-
-
-
-
-                //    }
-                //    catch (Exception ex)
-                //    {
-                //        Console.WriteLine("No lions");
-                //    }
-
-
-
-                //}
-
-
             }
-
-
-
-
-
-
         }
     }
 }
