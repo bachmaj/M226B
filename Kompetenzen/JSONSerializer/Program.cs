@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 using System.Runtime.Serialization;
@@ -12,27 +13,33 @@ namespace JSONSerializer
     {
         static void Main(string[] args)
         {
-            string fileName = $"{DateTime.Now:yyyy-MM-dd-hh-mm-ss-fff}.log";
-            string filePath = $"{Directory.GetCurrentDirectory()}{fileName}";
+            List<Log> logs = new List<Log>();
 
-            LogFile jsonLogFile = new LogFile(filePath, fileName);
-            Log jsonLog = new Log("Program.Main", "This is the content of the Log", jsonLogFile);
+            while (true)
+            {
+                string fileName = $"{DateTime.Now:yyyy-MM-dd-hh-mm-ss-fff}.log";
+                string filePath = $"{Directory.GetCurrentDirectory()}{fileName}";
+                LogFile jsonLogFile = new LogFile(filePath, fileName);
 
-            Console.WriteLine("Output of Log:");
-            jsonLog.PrintLog();
+                Log jsonLog = new Log("Program.Main", "This is the content of the Log", jsonLogFile);
+                logs.Add(jsonLog);
 
-            StreamWriter sw = new StreamWriter(filePath, false, Encoding.UTF8);
+                Console.WriteLine("Output of Log:");
+                jsonLog.PrintLog();
 
-            sw.Write(JsonSerializer.Serialize(jsonLog));
-            sw.Close();
+                StreamWriter sw = new StreamWriter(filePath, false, Encoding.UTF8);
 
-            StreamReader sr = new StreamReader(filePath, Encoding.UTF8);
+                sw.Write(JsonSerializer.Serialize(jsonLog));
+                sw.Close();
 
-            Log readJsonLog = JsonSerializer.Deserialize<Log>(sr.ReadToEnd());
-            sr.Close();
+                StreamReader sr = new StreamReader(filePath, Encoding.UTF8);
 
-            Console.WriteLine("Read Json Log:");
-            readJsonLog?.PrintLog();
+                //Log readJsonLog = JsonSerializer.Deserialize<Log>(json: sr.ReadToEnd());
+                sr.Close();
+
+                Console.WriteLine("Read Json Log:");
+                //readJsonLog?.PrintLog();
+            }
         }
     }
 }
