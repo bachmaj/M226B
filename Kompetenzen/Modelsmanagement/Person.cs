@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Modelsmanagement
 {
-    public class Person
+    public class Person : IPrintable
     {
         public Person()
         {

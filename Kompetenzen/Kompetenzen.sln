@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SerializerJson", "Serialize
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Events", "..\..\..\..\Downloads\01-M226B-master\01-M226B-master\M226B\Events\Events.csproj", "{2141EECD-5368-47DB-AB0A-C3667AB95320}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modelsmanagement", "Modelsmanagement\Modelsmanagement.csproj", "{F29EB6CB-8839-44C2-9E5C-3A0143FA6E1C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modelsmanagement", "Modelsmanagement\Modelsmanagement.csproj", "{F29EB6CB-8839-44C2-9E5C-3A0143FA6E1C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{22286EC8-1E5E-4B71-BA3D-93F2B7513E9A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{F29EB6CB-8839-44C2-9E5C-3A0143FA6E1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F29EB6CB-8839-44C2-9E5C-3A0143FA6E1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F29EB6CB-8839-44C2-9E5C-3A0143FA6E1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22286EC8-1E5E-4B71-BA3D-93F2B7513E9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22286EC8-1E5E-4B71-BA3D-93F2B7513E9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22286EC8-1E5E-4B71-BA3D-93F2B7513E9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22286EC8-1E5E-4B71-BA3D-93F2B7513E9A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

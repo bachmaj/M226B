@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Modelsmanagement
 {
-    public class Employee : Person
+    public class Employee : Person, IPrintable
     {
         public Employee(string company, int id, int age, string name) : base(id, age, name)
         {
