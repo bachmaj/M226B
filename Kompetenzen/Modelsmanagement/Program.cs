@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Modelsmanagement
 {
@@ -21,7 +23,7 @@ namespace Modelsmanagement
 
 
 
-            Console.WriteLine("Specify Employees Id");
+            Console.WriteLine("\n\nSpecify Employees Id");
             int employeeId = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("Specify Employees age");
@@ -33,9 +35,11 @@ namespace Modelsmanagement
             Console.WriteLine("Specify Employees company");
             string employeeCompany = Console.ReadLine();
 
-            Employee employee = new Employee(employeeCompany, employeeId, employeeAge, employeeName);
+            Person employee = new Employee(employeeCompany, employeeId, employeeAge, employeeName);
 
             employee.PrintInfo();
+
+            Logger logger = new Logger();
 
 
 
@@ -48,12 +52,31 @@ namespace Modelsmanagement
             Console.WriteLine("Specify Customers name");
             string customerName = Console.ReadLine();
 
-            Console.WriteLine("Specify Customers company");
+            Console.WriteLine("Specify Customers city");
             string customerCity = Console.ReadLine();
 
-            Employee customer = new Employee(customerCity, customerId, customerAge, customerName);
+            Person customer = new Customer(customerCity, customerId, customerAge, customerName);
 
             customer.PrintInfo();
+
+
+
+            List<Person> persons = new List<Person>()
+            {
+                person,
+                employee,
+                customer
+            };
+
+            persons = persons.Where(x => DateTime.Now - x.ActiveSince > new TimeSpan(0, 0, 45)).ToList();
+            persons.OrderBy(x => x.Id);
+
+            foreach(Person listPerson in persons)
+            {
+                listPerson.Id++;
+            }
+
+            persons.First().PrintInfo();
         }
     }
 }
