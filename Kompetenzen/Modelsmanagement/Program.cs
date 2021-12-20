@@ -39,8 +39,6 @@ namespace Modelsmanagement
 
             employee.PrintInfo();
 
-            Logger logger = new Logger();
-
 
 
             Console.WriteLine("\n\nSpecify Customers Id");
